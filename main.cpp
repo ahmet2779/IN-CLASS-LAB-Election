@@ -48,7 +48,7 @@ struct Citizen
 
 		for (int i = 0; i < 10; i++)
 		{
-			if (positions[i].isPro = candidate.positions[i].isPro)
+			if (positions[i].isPro == candidate.positions[i].isPro)
 			{
 				agreementCount++;
 			}
@@ -138,6 +138,13 @@ int main()
 
 		//Creating and initializing an array of citizens
 		Citizen citizens[1000];
+
+		//there is a missing for loop in here thats why all the votes going into one person
+		//use a for loop to initilize each citizen
+		for (int c = 0; c < 1000; c++)
+		{
+			citizens[c].ChooseIssues(issues);
+		}
 
 		for (int i = 0; i < 10; i++)
 		{
